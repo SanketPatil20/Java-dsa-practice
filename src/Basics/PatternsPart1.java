@@ -61,15 +61,7 @@ public class PatternsPart1 {
         System.out.println(" ");
     }
 
-//    public static void pattern7(int n){
-//        for (int i =n; i >= 1; i--){
-//            for (int j=1;j<=i;j++){
-//                System.out.print(j+"" );
-//            }
-//            System.out.println("");
-//        }
-//        System.out.println(" ");
-//    }
+
 
 
 
@@ -81,7 +73,6 @@ public class PatternsPart1 {
         pattern4(n);
         pattern5(n);
         pattern6(n);
-//        pattern7(n);
     }
 
 }
