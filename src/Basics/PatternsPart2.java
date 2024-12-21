@@ -80,6 +80,38 @@ public class PatternsPart2 {
         System.out.println(" ");
     }
 
+
+    public static void pattern17(int n){
+        for (int i=1; i<=n; i++){
+            for (int j=1;j<=n-i;j++){
+                System.out.print(" ");
+            }
+            char ch = 'A';
+            int breakPnt = (2*i+1)/2;
+            for (int j = 1; j <= 2*i-1; j++) {
+                System.out.print(ch);
+                if ( j < breakPnt) ch++;
+                else ch--;
+            }
+            System.out.println("");
+        }
+        System.out.println(" ");
+    }
+
+    public static void pattern18(int n){
+        char start = (char) ('A' + n -1);
+        for(int i = 0; i <n; i++) {
+            char ch = (char) (start-i);
+            for (int j=0; j<=i; j++){
+                System.out.print((char) (ch+j) +" ");
+            }
+            System.out.println("");
+        }
+        System.out.println(" ");
+    }
+
+
+
     public static void main(String[] args) {
         int n = 5;
 
@@ -89,5 +121,7 @@ public class PatternsPart2 {
         pattern15(n);
         pattern16(n);
         pattern21(n);
+        pattern17(n);
+        pattern18(n);
     }
 }
