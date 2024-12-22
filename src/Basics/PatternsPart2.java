@@ -1,5 +1,7 @@
 package Basics;
 
+import static java.util.Collections.min;
+
 public class PatternsPart2 {
     public static void pattern12(int n){
         for(int i = 1; i <=n; i++) {
@@ -148,6 +150,47 @@ public class PatternsPart2 {
         System.out.println("");
     }
 
+    public static void pattern20(int n){
+        int spaces = 2*n -2 ;
+        for (int i=1; i<=2*n-1;i++){
+            int stars = i;
+            if ( i > n) stars = 2*n -i;
+            //stars
+            for(int j=1; j<=stars;j++){
+                System.out.print("*");
+            }
+            //spaces
+            for(int j = 1; j<=spaces;j++){
+                System.out.print(" ");
+            }
+            //stars
+            for(int j = 1;j<=stars;j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+            if (i<n) spaces -=2;
+            else spaces +=2;
+        }
+
+        System.out.println(" ");
+    }
+
+//    public static void pattern22(int n){
+//        for(int i = 0; i <n; i++) {
+//            for (int j=0; j<2*n-1;j++){
+//                int top = i;
+//                int left = j;
+//                int right = (2*n -2)- j;
+//                int down = (2*n -2)-i;
+//                System.out.print(n-min(min(top, down), min(left,right)));
+//            }
+//
+//
+//            System.out.println("");
+//        }
+//        System.out.println(" ");
+//    }
+
 
     public static void main(String[] args) {
         int n = 5;
@@ -157,9 +200,11 @@ public class PatternsPart2 {
         pattern14(n);
         pattern15(n);
         pattern16(n);
-        pattern21(n);
         pattern17(n);
         pattern18(n);
         pattern19(n);
+        pattern20(n);
+        pattern21(n);
+//        pattern22(n);
     }
 }
