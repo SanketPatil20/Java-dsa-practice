@@ -11,3 +11,5 @@ public class inputOutput {
         System.out.println("Multiplication result: " + result);
     }
 }
+
+
